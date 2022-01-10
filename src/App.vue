@@ -1,26 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <main class="main-content">
+    <UserPanel />
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import UserPanel from './components/User/UserPanel.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    UserPanel
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  .main-content {
+    background-color: whitesmoke;
+    }
+    
+    @media only screen and (min-width: 768px) {
+      .main-content {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 4%;
+      }
+    }
+  
 </style>
